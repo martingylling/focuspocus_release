@@ -10,10 +10,8 @@ Welcome to the FocusPocus GitHub repository! This is where you can download inst
 - [View the Changelog](./CHANGELOG.md)
 ---
 ## 🛠️ Installation Instructions
-
-1. Navigate to the appropriate version and OS type.
-2. Download the file.
-3. Install the program.
+1. Click the link to download the latest version for your OS.
+2. Run the installation.
 ---
 ## Windows users
 Windows defender may block the program from running, if that is the case follow these steps;
