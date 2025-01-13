@@ -15,7 +15,15 @@ Welcome to the FocusPocus GitHub repository! This is where you can download inst
 
 1. Navigate to the appropriate version and OS type.
 2. Download the file.
-3. Follow the standard installation procedure for your operating system.
+3. Install the program.
+---
+## Windows users
+Windows defender may block the program from running, if that is the case follow these steps;
+ 1. In your Windows environment, go to Start > Settings > Update & Security > Windows Security > Virus & threat protection.
+
+ 2. On the left-hand side, select Manage settings > Exclusion > Add or remove exclusions.
+
+ 3. Select Add an exclusion and choose the folder option and navigate to the installation folder (e.g. C:/FocusPocus).
 ---
 
 ## 💬 Feedback and Issues
