@@ -4,9 +4,7 @@ Welcome to the FocusPocus GitHub repository! This is where you can download inst
 
 ---
 ## 📂 Releases
-- [Latest Version for Windows](./releases/v1.1.0/windows/)
-- [Latest Version for macOS](./releases/v1.1.0/mac/)
-- [Latest Version for Linux](./releases/v1.1.0/linux/)  
+- [Latest Version for Windows](./releases/v1.0.0/windows/)
 ---
 ## 🔗Changelog 
 - [View the Changelog](./CHANGELOG.md)
