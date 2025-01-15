@@ -9,19 +9,16 @@ Welcome to the FocusPocus GitHub repository! This is where you can download inst
 ## 🔗Changelog 
 - [View the Changelog](./CHANGELOG.md)
 ---
-## 🛠️ Installation Instructions
-1. Click the link to download the latest version for your OS.
+## 🛠️ Windows Installation
+1. Click the link to download the latest windows version.
 2. Run the installation.
----
-## Windows users
-Windows defender may block the program from running, if that is the case follow these steps;
+3. Windows defender may block the program from running, if that is the case follow these steps;
  1. In your Windows environment, go to Start > Settings > Update & Security > Windows Security > Virus & threat protection.
 
  2. On the left-hand side, select Manage settings > Exclusion > Add or remove exclusions.
 
  3. Select Add an exclusion and choose the folder option and navigate to the installation folder (e.g. C:/FocusPocus).
 ---
-
 ## 💬 Feedback and Issues
 Found a bug or want to suggest a feature? Feel free to open an [issue](https://github.com/martingylling/focuspocus_release/issues).
 
