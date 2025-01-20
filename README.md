@@ -22,3 +22,5 @@ Welcome to the FocusPocus GitHub repository! This is where you can download inst
 ## 💬 Feedback and Issues
 Found a bug or want to suggest a feature? Feel free to open an [issue](https://github.com/martingylling/focuspocus_release/issues).
 
+## 📸 Image Submission
+Want to share what you've made? Feel free to share it [here](https://github.com/martingylling/focuspocus_release/discussions/1).
