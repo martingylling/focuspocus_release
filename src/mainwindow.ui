@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1519</width>
+    <height>911</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Focus Pocus</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" rowspan="2">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::tab-bar {
+	alignment: center;
+}</string>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::TabPosition::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::TabShape::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Rendering</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QGraphicsView" name="PreviewImage">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::NoFrame</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
+          </property>
+          <property name="backgroundBrush">
+           <brush brushstyle="NoBrush">
+            <color alpha="0">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </property>
+          <property name="foregroundBrush">
+           <brush brushstyle="NoBrush">
+            <color alpha="0">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGraphicsView" name="RenderImage">
+          <property name="frameShape">
+           <enum>QFrame::Shape::NoFrame</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Output</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QGraphicsView" name="ResultImage">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::NoFrame</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QFrame" name="frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Layers</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QListWidget" name="LayersList">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::NoFrame</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
+            </property>
+            <property name="dragEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="dragDropMode">
+             <enum>QAbstractItemView::DragDropMode::InternalMove</enum>
+            </property>
+            <property name="defaultDropAction">
+             <enum>Qt::DropAction::MoveAction</enum>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="selectionRectVisible">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>Parameters</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="8" column="0">
+           <widget class="QSpinBox" name="SmoothIterations">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Smooth Iterations&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter sets how many times the filter is applied to the depth map. It is better to adjust this parameter first before changing the other smooth parameters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="value">
+             <number>5</number>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" colspan="2">
+           <widget class="QSlider" name="SmoothStrengthSlider">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Smooth Strength&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter directly controls the smoothing effect of the filter applied to the depth map.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Lower values:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Reduces both color and spatial smoothing.&lt;/p&gt;&lt;p&gt;Retains more detail and sharpness, but edges and textures may appear noisy.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Increases both color and spatial smoothing.&lt;/p&gt;&lt;p&gt;Results in smoother transitions between layers, but some fine details may be lost.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="minimum">
+             <number>10</number>
+            </property>
+            <property name="maximum">
+             <number>500</number>
+            </property>
+            <property name="singleStep">
+             <number>5</number>
+            </property>
+            <property name="value">
+             <number>100</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="2" colspan="3">
+           <widget class="QPushButton" name="SaveParams">
+            <property name="text">
+             <string>&amp;Save parameters</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1" colspan="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QLabel" name="label">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Laplacian Kernel Size&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter controls the size of the kernel used for calculating the Laplacian operator, which is a method for detecting focus in an image. The Laplacian operator identifies regions with significant changes in intensity, which are often areas in focus.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller kernels are more sensitive to small details.&lt;/p&gt;&lt;p&gt;May emphasize fine textures but could also introduce noise and slight inaccuracies in focus detection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger kernels smooth out fine details and focus on broader, more prominent edges.&lt;/p&gt;&lt;p&gt;May lose finer textures but improve robustness in detecting focus on larger structures.&lt;/p&gt;&lt;p&gt;May introduce halo artifacts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Laplacian Kernel size:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="OddSpinBox" name="SmoothKernelSpinbox">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Smooth Kernel Size&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter controls the size of the kernel used for smoothing out the depth map. Smoothing helps reduce artifacts at the boundaries of different focus regions.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller kernels creates sharper transitions between layers.&lt;/p&gt;&lt;p&gt;May be inneffective of removing noise from the depth map.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger kernels creates more gradual transitions between layers.&lt;/p&gt;&lt;p&gt;More effective to remove noise from the depth map.&lt;/p&gt;&lt;p&gt;May blur out smaller focus regions in the final image.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="minimum">
+             <number>3</number>
+            </property>
+            <property name="maximum">
+             <number>199</number>
+            </property>
+            <property name="singleStep">
+             <number>2</number>
+            </property>
+            <property name="value">
+             <number>17</number>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0" colspan="2">
+           <widget class="QCheckBox" name="BlendLayers">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Blend layers&lt;/span&gt;&lt;/p&gt;&lt;p&gt;A toggle option to enable or disable blending between layers.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Enabled:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The pixel values are blended between layers in order to create a smoother image.&lt;/p&gt;&lt;p&gt;Reduces visible seams and harsh transitions between layers.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Disabled:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The pixel values are not blended, instead the layer closest to the value of the depth map is selected.&lt;/p&gt;&lt;p&gt;May show artifacts at layer boundaries but preserves individual layer sharpness.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LayoutDirection::LeftToRight</enum>
+            </property>
+            <property name="text">
+             <string>Blend layers</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="OddSpinBox" name="LaplacianKernelSpinBox">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Laplacian Kernel Size&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;This parameter controls the size of the kernel used for calculating the Laplacian operator, which is a method for detecting focus in an image. The Laplacian operator identifies regions with significant changes in intensity, which are often areas in focus.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller kernels are more sensitive to small details.&lt;/p&gt;&lt;p&gt;May emphasize fine textures but could also introduce noise and slight inaccuracies in focus detection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger kernels smooth out fine details and focus on broader, more prominent edges.&lt;/p&gt;&lt;p&gt;May lose finer textures but improves robustness in detecting focus on larger structures.&lt;/p&gt;&lt;p&gt;May introduce halo artifacts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="minimum">
+             <number>3</number>
+            </property>
+            <property name="maximum">
+             <number>199</number>
+            </property>
+            <property name="singleStep">
+             <number>2</number>
+            </property>
+            <property name="value">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" colspan="2">
+           <widget class="QLabel" name="label_3">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Smooth Iterations&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter sets how many times the filter is applied to the depth map. It is better to adjust this parameter first before changing the other smooth parameters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Smooth iterations:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="2">
+           <widget class="QPushButton" name="LoadParams">
+            <property name="text">
+             <string>&amp;Load parameters</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QSpinBox" name="SmoothStrengthSpinBox">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Smooth Strength&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter directly controls the smoothing effect of the filter applied to the depth map.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Lower values:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Reduces both color and spatial smoothing.&lt;/p&gt;&lt;p&gt;Retains more detail and sharpness, but edges and textures may appear noisy.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Increases both color and spatial smoothing.&lt;/p&gt;&lt;p&gt;Results in smoother transitions between layers, but some fine details may be lost.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="minimum">
+             <number>10</number>
+            </property>
+            <property name="maximum">
+             <number>500</number>
+            </property>
+            <property name="singleStep">
+             <number>5</number>
+            </property>
+            <property name="value">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="OddSlider" name="LaplacianKernelSlider">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Laplacian Kernel Size&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter controls the size of the kernel used for calculating the Laplacian operator, which is a method for detecting focus in an image. The Laplacian operator identifies regions with significant changes in intensity, which are often areas in focus.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller kernels are more sensitive to small details.&lt;/p&gt;&lt;p&gt;May emphasize fine textures but could also introduce noise and slight inaccuracies in focus detection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger kernels smooth out fine details and focus on broader, more prominent edges.&lt;/p&gt;&lt;p&gt;May lose finer textures but improve robustness in detecting focus on larger structures.&lt;/p&gt;&lt;p&gt;May introduce halo artifacts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="minimum">
+             <number>3</number>
+            </property>
+            <property name="maximum">
+             <number>199</number>
+            </property>
+            <property name="singleStep">
+             <number>2</number>
+            </property>
+            <property name="value">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="invertedAppearance">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="2">
+           <widget class="OddSlider" name="SmoothKernelSlider">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Smooth Kernel Size&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter controls the size of the kernel used for smoothing out the depth map. Smoothing helps reduce artifacts at the boundaries of different focus regions.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller kernels creates sharper transitions between layers.&lt;/p&gt;&lt;p&gt;May be inneffective of removing noise from the depth map.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger kernels creates more gradual transitions between layers.&lt;/p&gt;&lt;p&gt;More effective to remove noise from the depth map.&lt;/p&gt;&lt;p&gt;May blur out smaller focus regions in the final image.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="minimum">
+             <number>3</number>
+            </property>
+            <property name="maximum">
+             <number>199</number>
+            </property>
+            <property name="singleStep">
+             <number>2</number>
+            </property>
+            <property name="value">
+             <number>17</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" colspan="2">
+           <widget class="QLabel" name="label_5">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Smooth Strength&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter directly controls the smoothing effect of the filter applied to the depth map.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Lower values:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Reduces both color and spatial smoothing.&lt;/p&gt;&lt;p&gt;Retains more detail and sharpness, but edges and textures may appear noisy.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Increases both color and spatial smoothing.&lt;/p&gt;&lt;p&gt;Results in smoother transitions between layers, but some fine details may be lost.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Smooth strength:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QLabel" name="label_2">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Smooth Kernel Size&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter controls the size of the kernel used for smoothing out the depth map. Smoothing helps reduce artifacts at the boundaries of different focus regions.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller kernels creates sharper transitions between layers.&lt;/p&gt;&lt;p&gt;May be inneffective of removing noise from the depth map.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger kernels creates more gradual transitions between layers.&lt;/p&gt;&lt;p&gt;More effective to remove noise from the depth map.&lt;/p&gt;&lt;p&gt;May blur out smaller focus regions in the final image.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Smooth Kernel size:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QToolButton" name="RestoreDefault">
+            <property name="toolTip">
+             <string>Restore to default parameters</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset theme="QIcon::ThemeIcon::ViewRestore"/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="StackButton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Stack images</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="ProgressLabel">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="ProgressBar">
+         <property name="value">
+          <number>24</number>
+         </property>
+         <property name="textVisible">
+          <bool>true</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="textDirection">
+          <enum>QProgressBar::Direction::TopToBottom</enum>
+         </property>
+         <property name="format">
+          <string>%v/%m</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1519</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="action_Open_File"/>
+    <addaction name="action_Save_File"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="action_How_to_use"/>
+    <addaction name="action_About"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Open_File">
+   <property name="text">
+    <string>&amp;Open Files...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_Save_File">
+   <property name="text">
+    <string>&amp;Save File...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_How_to_use">
+   <property name="text">
+    <string>&amp;How to use...</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>&amp;About...</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>OddSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header location="global">oddspinbox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>OddSlider</class>
+   <extends>QSlider</extends>
+   <header location="global">oddslider.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
