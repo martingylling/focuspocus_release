@@ -4,7 +4,7 @@ Welcome to the FocusPocus GitHub repository! This is where you can download inst
 
 ---
 ## 📂 Releases
-- [Download latest version for Windows](https://github.com/martingylling/focuspocus_release/releases/download/windows/focuspocus_v1.0.0_windows.exe)
+- [Download latest version for Windows](https://github.com/martingylling/focuspocus_release/releases/download/v.1.0.0.1/focuspocus_v1.0.0.1_windows.exe)
 ---
 ## 🔗Changelog 
 - [View the Changelog](./CHANGELOG.md)
