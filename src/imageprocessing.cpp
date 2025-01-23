@@ -142,8 +142,8 @@ cv::Mat ImageProcessing::compute_depth_map(const std::vector<cv::Mat>& images, i
         cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
 
         cv::Mat sharpness,laplacian, gaussian;
-
-        cv::Laplacian(gray, laplacian, CV_64F, 5);
+        cv::GaussianBlur(gray,gaussian,cv::Size(3,3),0);
+        cv::Laplacian(gaussian, laplacian, CV_64F, 1);
 
         //Compute the local variance of the laplacian
         compute_local_variance(laplacian, sharpness, laplaceKernelSize);
@@ -165,8 +165,6 @@ cv::Mat ImageProcessing::compute_depth_map(const std::vector<cv::Mat>& images, i
         emit renderImage(dMapProgress, true);
         emit progress("Generating depth map.",layer+1, images.size());
     }
-
-    //Smooth the depth map
     //Convert depth map to flaat before smoothing
     depthMap.convertTo(depthMap, CV_32F);
 

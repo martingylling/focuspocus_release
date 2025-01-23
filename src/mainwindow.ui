@@ -251,10 +251,10 @@
           <item row="1" column="0" colspan="2">
            <widget class="QLabel" name="label">
             <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Laplacian Kernel Size&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter controls the size of the kernel used for calculating the Laplacian operator, which is a method for detecting focus in an image. The Laplacian operator identifies regions with significant changes in intensity, which are often areas in focus.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller kernels are more sensitive to small details.&lt;/p&gt;&lt;p&gt;May emphasize fine textures but could also introduce noise and slight inaccuracies in focus detection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger kernels smooth out fine details and focus on broader, more prominent edges.&lt;/p&gt;&lt;p&gt;May lose finer textures but improve robustness in detecting focus on larger structures.&lt;/p&gt;&lt;p&gt;May introduce halo artifacts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Variance windowsize&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter controls the windowsize used for calculating the local contrast for each pixel. The window uses neighbouring pixels for calculating the laplacian variance when determining the local contrast. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small windows:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller windows are more sensitive to small details.&lt;/p&gt;&lt;p&gt;May emphasize fine textures but could also introduce noise and slight inaccuracies in focus detection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large windows:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger smoothens out fine details and reduces background noise.&lt;/p&gt;&lt;p&gt;May lose finer textures but improves robustness in detecting focus on larger structures.&lt;/p&gt;&lt;p&gt;May introduce artifacts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Laplacian Kernel size:</string>
+             <string>Variance windowsize:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
@@ -270,7 +270,7 @@
              <number>3</number>
             </property>
             <property name="maximum">
-             <number>199</number>
+             <number>31</number>
             </property>
             <property name="singleStep">
              <number>2</number>
@@ -299,7 +299,7 @@
           <item row="2" column="2">
            <widget class="OddSpinBox" name="LaplacianKernelSpinBox">
             <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Laplacian Kernel Size&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;This parameter controls the size of the kernel used for calculating the Laplacian operator, which is a method for detecting focus in an image. The Laplacian operator identifies regions with significant changes in intensity, which are often areas in focus.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller kernels are more sensitive to small details.&lt;/p&gt;&lt;p&gt;May emphasize fine textures but could also introduce noise and slight inaccuracies in focus detection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger kernels smooth out fine details and focus on broader, more prominent edges.&lt;/p&gt;&lt;p&gt;May lose finer textures but improves robustness in detecting focus on larger structures.&lt;/p&gt;&lt;p&gt;May introduce halo artifacts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Variance windowsize&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;This parameter controls the windowsize used for calculating the local contrast for each pixel. The window uses neighbouring pixels for calculating the laplacian variance when determining the local contrast. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small windows:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller windows are more sensitive to small details.&lt;/p&gt;&lt;p&gt;May emphasize fine textures but could also introduce noise and slight inaccuracies in focus detection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large windows:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger smoothens out fine details and reduces background noise.&lt;/p&gt;&lt;p&gt;May lose finer textures but improves robustness in detecting focus on larger structures.&lt;/p&gt;&lt;p&gt;May introduce artifacts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="minimum">
              <number>3</number>
@@ -357,7 +357,7 @@
           <item row="2" column="0" colspan="2">
            <widget class="OddSlider" name="LaplacianKernelSlider">
             <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Laplacian Kernel Size&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter controls the size of the kernel used for calculating the Laplacian operator, which is a method for detecting focus in an image. The Laplacian operator identifies regions with significant changes in intensity, which are often areas in focus.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller kernels are more sensitive to small details.&lt;/p&gt;&lt;p&gt;May emphasize fine textures but could also introduce noise and slight inaccuracies in focus detection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large kernels:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger kernels smooth out fine details and focus on broader, more prominent edges.&lt;/p&gt;&lt;p&gt;May lose finer textures but improve robustness in detecting focus on larger structures.&lt;/p&gt;&lt;p&gt;May introduce halo artifacts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:700;&quot;&gt;Variance windowsize&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This parameter controls the windowsize used for calculating the local contrast for each pixel. The window uses neighbouring pixels for calculating the laplacian variance when determining the local contrast. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Small windows:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Smaller windows are more sensitive to small details.&lt;/p&gt;&lt;p&gt;May emphasize fine textures but could also introduce noise and slight inaccuracies in focus detection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline;&quot;&gt;Large windows:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Larger smoothens out fine details and reduces background noise.&lt;/p&gt;&lt;p&gt;May lose finer textures but improves robustness in detecting focus on larger structures.&lt;/p&gt;&lt;p&gt;May introduce artifacts.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="minimum">
              <number>3</number>
@@ -388,7 +388,7 @@
              <number>3</number>
             </property>
             <property name="maximum">
-             <number>199</number>
+             <number>31</number>
             </property>
             <property name="singleStep">
              <number>2</number>
@@ -490,7 +490,7 @@
      <x>0</x>
      <y>0</y>
      <width>1519</width>
-     <height>21</height>
+     <height>17</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
