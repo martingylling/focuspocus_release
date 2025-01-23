@@ -8,7 +8,6 @@ All notable changes to this project will be documented in this file.
 
 ### Changes
 - Laplacian kernelsize changed.
-- Gaussian blur before Laplacian operator.
 - Description of the first slider corrected.
 - Image formats of openfile.
 
